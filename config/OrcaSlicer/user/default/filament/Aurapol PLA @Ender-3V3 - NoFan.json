@@ -1,0 +1,37 @@
+{
+    "enable_overhang_bridge_fan": [
+        "0"
+    ],
+    "fan_max_speed": [
+        "0"
+    ],
+    "fan_min_speed": [
+        "0"
+    ],
+    "filament_settings_id": [
+        "Aurapol PLA @Ender-3V3 - NoFan"
+    ],
+    "from": "User",
+    "hot_plate_temp": [
+        "60"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "60"
+    ],
+    "inherits": "Creality Generic PLA @Ender-3V3-all",
+    "is_custom_defined": "0",
+    "name": "Aurapol PLA @Ender-3V3 - NoFan",
+    "nozzle_temperature": [
+        "230"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "230"
+    ],
+    "reduce_fan_stop_start_freq": [
+        "0"
+    ],
+    "slow_down_for_layer_cooling": [
+        "0"
+    ],
+    "version": "2.2.0.4"
+}

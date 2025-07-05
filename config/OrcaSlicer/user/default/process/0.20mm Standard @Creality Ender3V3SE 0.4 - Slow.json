@@ -1,0 +1,16 @@
+{
+    "from": "User",
+    "gcode_comments": "1",
+    "inherits": "0.20mm Standard @Creality Ender3V3SE 0.4",
+    "initial_layer_travel_speed": "50%",
+    "inner_wall_speed": "60",
+    "internal_bridge_speed": "100%",
+    "internal_solid_infill_speed": "80",
+    "is_custom_defined": "0",
+    "name": "0.20mm Standard @Creality Ender3V3SE 0.4 - Slow",
+    "outer_wall_speed": "40",
+    "print_settings_id": "0.20mm Standard @Creality Ender3V3SE 0.4 - Slow",
+    "sparse_infill_speed": "80",
+    "travel_speed": "100",
+    "version": "2.2.0.4"
+}

@@ -1,0 +1,254 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "auto",
+    "source": "/home/kozel/.config/fastfetch/cachyos.png",
+    "padding": {
+      "right": 5,
+      "top": 12,
+      "left": 5
+    }
+  },
+  "general": {
+    "multithreading": true
+  },
+  "display": {
+    "separator": "➜   "
+  },
+  "modules": [
+    "break",
+    {
+      "type": "title",
+      "format": "                                  {6}{7}{8}"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "\u001b[90m┌────────────────────────────────────Software───────────────────────────────────┐"
+    },
+    {
+      "key": "     OS            ",
+      "keyColor": "green",
+      "type": "os"
+    },
+    {
+      "key": "     Kernel        ",
+      "keyColor": "green",
+      "type": "kernel"
+    },
+    {
+      "type": "command",
+      "text": "grub-install --version",
+      "key": "    \u001b[32m󱗈 Bootloader    "
+    },
+    {
+      "key": "     LM            ",
+      "keyColor": "green",
+      "type": "lm"
+    },
+    {
+      "key": "     DE            ",
+      "keyColor": "green",
+      "type": "de"
+    },
+    {
+      "key": "     WM            ",
+      "keyColor": "green",
+      "type": "wm"
+    },
+    {
+      "key": "    󰏖 Packages      ",
+      "keyColor": "green",
+      "type": "packages"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[90m    ──────────────────────────────────"
+    },
+    {
+      "type": "command",
+      "text": "checkupdates | wc -l",
+      "key": "    \u001b[32m󰚰 Updates count "
+    },
+    {
+      "type": "command",
+      "text": "last_update=$(grep \"full system upgrade\" /var/log/pacman.log | tail -1 | cut -d ' ' -f 1 | sed 's/\\[//g;s/\\]\//g'); upd_ran=$(( ($(date +%s) - $(date -d \"$last_update\" +%s)) / 86400 )); echo -e  \u001b[4m\u001b[5m$upd_ran\u001b[0m days ago",
+      "key": "    \u001b[32m󰚰 Last updated  "
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[90m    ──────────────────────────────────"
+    },
+    {
+      "key": "     Terminal      ",
+      "keyColor": "green",
+      "type": "terminal"
+    },
+    {
+      "key": "     Shell         ",
+      "keyColor": "green",
+      "type": "shell"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[90m└───────────────────────────────────────────────────────────────────────────────┘"
+    },
+    "break",
+    "break",
+    {
+      "type": "custom",
+      "format": "\u001b[90m┌────────────────────────────────────Hardware───────────────────────────────────┐"
+    },
+    {
+      "key": "    󰌢 Host          ",
+      "keyColor": "red",
+      "type": "host"
+    },
+    {
+      "key": "     BIOS          ",
+      "keyColor": "red",
+      "type": "bios"
+    },
+    {
+      "key": "     CPU           ",
+      "keyColor": "red",
+      "type": "cpu"
+    },
+    {
+      "key": "    󰍛 GPU           ",
+      "keyColor": "red",
+      "type": "gpu"
+    },
+    {
+      "key": "    󰑭 RAM           ",
+      "keyColor": "red",
+      "type": "memory"
+    },
+    {
+      "key": "     Battery       ",
+      "keyColor": "red",
+      "type": "battery"
+    },
+    {
+      "key": "     Bluetooth Dev ",
+      "keyColor": "red",
+      "type": "bluetoothradio"
+    },
+    {
+      "key": "     Disk          ",
+      "keyColor": "red",
+      "type": "disk"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[90m└───────────────────────────────────────────────────────────────────────────────┘"
+    },
+    "break",
+    "break",
+    {
+      "type": "custom",
+      "format": "\u001b[90m┌─────────────────────────────────────Themes────────────────────────────────────┐"
+    },
+    {
+      "key": "    󰔎 Theme         ",
+      "keyColor": "bright_magenta",
+      "type": "theme"
+    },
+    {
+      "key": "     Font          ",
+      "keyColor": "bright_magenta",
+      "type": "font"
+    },
+    {
+      "key": "     Icons         ",
+      "keyColor": "bright_magenta",
+      "type": "icons"
+    },
+    {
+      "key": "    󰇀 Cursor        ",
+      "keyColor": "bright_magenta",
+      "type": "cursor"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[90m└───────────────────────────────────────────────────────────────────────────────┘"
+    },
+    "break",
+    "break",
+    {
+      "type": "custom",
+      "format": "\u001b[90m┌───────────────────────────────────Networking──────────────────────────────────┐"
+    },
+    {
+      "key": "     WiFi          ",
+      "keyColor": "yellow",
+      "type": "wifi"
+    },
+    {
+      "key": "     Bluetooth     ",
+      "keyColor": "yellow",
+      "type": "bluetooth"
+    },
+    {
+      "key": "     IP            ",
+      "keyColor": "yellow",
+      "type": "localip"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[90m└───────────────────────────────────────────────────────────────────────────────┘"
+    },
+    "break",
+    "break",
+    {
+      "type": "custom",
+      "format": "\u001b[90m┌─────────────────────────────────────Others────────────────────────────────────┐"
+    },
+    {
+      "key": "     Uptime        ",
+      "keyColor": "blue",
+      "type": "uptime"
+    },
+    {
+      "type": "command",
+      "text": "echo 10.06.2024",
+      "key": "    \u001b[34m OS Inst. BD   "
+    },
+    {
+      "type": "command",
+      "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days",
+      "key": "    \u001b[34m OS Inst. Age  "
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[90m    ──────────────────────────────────"
+    },
+    {
+      "type": "command",
+      "text": "echo 10.06.2024",
+      "key": "    \u001b[34m DD Linux from "
+    },
+    {
+      "type": "command",
+      "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days",
+      "key": "    \u001b[34m DD Linux for  "
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[90m    ──────────────────────────────────"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[90m└───────────────────────────────────────────────────────────────────────────────┘"
+    },
+    "break",
+    {
+      "type": "colors",
+      "paddingLeft": 34,
+      "symbol": "circle",
+      "block": {
+        "width": 10
+      }
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "general": {
+    "multithreading": true
+  },
+  "display": {
+    "separator": "➜   "
+  },
+  "modules": [
+    "break",
+    {
+      "type": "title",
+      "format": "                                {6}{7}{8}"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "\u001b[90m┌────────────────────────────────────Software───────────────────────────────────┐",
+    },
+    "break",
+    {
+      "key": "    🐧 OS           ",
+      "keyColor": "green",
+      "type": "os"
+    },
+    {
+      "key": "    💻 Machine      ",
+      "keyColor": "cyan",
+      "type": "host"
+    },
+    {
+      "key": "     Kernel       ",
+      "keyColor": "blue",
+      "type": "kernel"
+    },
+    {
+      "key": "    🕒 Uptime       ",
+      "keyColor": "green",
+      "type": "uptime"
+    },
+    {
+      "key": "    📦 Packages     ",
+      "keyColor": "cyan",
+      "type": "packages"
+    },
+    {
+      "key": "     WM           ",
+      "keyColor": "blue",
+      "type": "wm"
+    },
+    {
+      "key": "     Shell        ",
+      "keyColor": "green",
+      "type": "shell"
+    },
+    {
+      "key": "     Terminal     ",
+      "keyColor": "cyan",
+      "type": "terminal"
+    },
+    {
+      "key": "     Font         ",
+      "keyColor": "blue",
+      "type": "terminalfont"
+    },
+    {
+      "key": "     CPU          ",
+      "keyColor": "green",
+      "type": "cpu"
+    },
+    {
+      "key": "    󰍛 GPU          ",
+      "keyColor": "cyan",
+      "type": "gpu"
+    },
+    {
+      "key": "    󰑭 Memory       ",
+      "keyColor": "blue",
+      "type": "memory"
+    },
+    {
+      "key": "     Wifi         ",
+      "keyColor": "green",
+      "type": "wifi"
+    },
+    {
+      "key": "    󰩟 Local IP     ",
+      "keyColor": "cyan",
+      "type": "localip",
+      "compact": true
+    },
+    {
+      "type": "command",
+      "text": "checkupdates | wc -l",
+      "key": "    ♻️ Počet updatů "
+    },
+    {
+      "type": "command",
+      "text": "echo 10.06.2024",
+      "key": "     OS Birthday  "
+    },
+    {
+      "type": "command",
+      "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days",
+      "key": "     OS Age       "
+    },
+//    {
+//      "type": "command",
+//      "text": "last_update=$(grep "full system upgrade" /var/log/pacman.log | tail -1 | cut -d ' ' -f 1 | sed 's/\[//g;s/\]//g'); upd_ran=$(($(($(date +%s) - $(date -d "$last_update" +%s))) / 86400)); upd_ran_min="5"; upd_ran_max="7"; if [ "$upd_ran" -le "$upd_ran_min" ]; then echo -e "\e[35mPoslední aktualizace byla provedena před \e[92;4m$upd_ran\e[0;35m dny.\e[0m"; elif [ "$upd_ran" -gt "$upd_ran_min" ] && [ "$upd_ran" -le "$upd_ran_max" ]; then echo -e "\e[35mPoslední aktualizace byla provedena před \e[91;5;4m$upd_ran\e[0;35m dny.\e[0m"; else echo -e "\e[41;5;4mPoslední aktualizace proběhla před $upd_ran dny (před více, než 1 týdnem). Prosíme o neodkladnou aktualizaci systému!\e[0m"; fi",
+//      "key": "     OS Age       "
+//    },
+    "break",
+    {
+      "type": "custom",
+      "format": "└──────────────────────────────────────────────────────────────────────────────┘" // `\u001b` is `\033`, or `\e`
+    },
+    "break",
+    {
+      "type": "colors",
+      "paddingLeft": 34,
+      "symbol": "circle",
+      "block": {
+        "width": 10
+      }
+    }
+  ]
+}
